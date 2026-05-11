@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dart analyze *)",
+      "Bash(grep -E \"\\\\.\\(ts|js\\)$\")",
+      "Bash(xargs grep *)",
+      "Bash(git status *)",
+      "Bash(git reset *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(mysql *)",
+      "Bash(node -e \"const mysql = require\\('mysql2/promise'\\); mysql.createConnection\\({host:'192.168.31.47',port:3306,user:'root',password:'66666666'}\\).then\\(c=>c.query\\('CREATE DATABASE IF NOT EXISTS paseo_relay'\\)\\).then\\(\\(\\)=>console.log\\('OK'\\)\\).catch\\(e=>console.error\\(e.message\\)\\)\")",
+      "Bash(npm install *)",
+      "Bash(curl *)",
+      "Bash(git checkout *)",
+      "Bash(rm -f relay-admin/src/composables/useAuth.ts)",
+      "Bash(rmdir relay-admin/src/composables)",
+      "Bash(flutter analyze *)",
+      "Bash(npx tsc *)",
+      "Bash(git -C /Users/hgan/Desktop/paseo-0.1.61 diff HEAD -- flutterpaseo/lib/src/screens/app_settings_screen.dart)"
+    ]
+  }
+}

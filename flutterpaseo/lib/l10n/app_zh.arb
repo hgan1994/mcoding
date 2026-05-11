@@ -1,0 +1,390 @@
+{
+  "@@locale": "zh",
+  "appTitle": "mcoding",
+  "loginTitle": "手机号验证码登录",
+  "phoneLabel": "手机号",
+  "phoneHint": "请输入手机号",
+  "codeLabel": "验证码",
+  "codeHint": "请输入验证码",
+  "sendCode": "获取验证码",
+  "loginButton": "登录 / 注册",
+  "otherLoginMethods": "其他登录方式",
+  "codeSent": "验证码已发送",
+  "networkError": "网络错误，请稍后重试",
+  "loginFailed": "登录失败，请检查网络",
+  "legalConsentTitle": "用户协议与隐私政策",
+  "legalConsentBody": "欢迎使用 mcoding 开源版。继续前，请先阅读当前部署已配置的隐私政策和条款链接。",
+  "legalConsentRequired": "如不同意，请停止使用当前部署。",
+  "privacyPolicy": "隐私政策",
+  "termsOfUse": "用户协议",
+  "agreeAndContinue": "同意并继续",
+  "disagreeAndExit": "不同意并退出",
+  "viewLegalAgreements": "查看隐私政策与用户协议",
+  "connectionSuccess": "连接成功",
+  "connectionSuccessMsg": "已连接到 {serverId}",
+  "enter": "进入",
+  "connectionFailed": "连接失败",
+  "rescan": "重新扫码",
+  "connectionTimeout": "连接超时：请确认 relay-service 已启动，手机和电脑在同一网络，并且二维码里的 relay 地址可访问。",
+  "cameraPermissionDenied": "请在系统设置里允许 mcoding 使用相机后再扫码。",
+  "cameraUnsupported": "当前设备没有可用相机，请换真机或粘贴配对链接。",
+  "scanQRCode": "扫码添加设备",
+  "sessions": "会话",
+  "archived": "归档",
+  "noArchivedSessions": "没有归档的会话",
+  "hostOffline": "主机离线",
+  "retry": "重试",
+  "noSessions": "还没有会话",
+  "createFirstAgent": "创建你的第一个智能体来开始",
+  "newAgent": "新建智能体",
+  "initialPrompt": "初始提示词",
+  "provider": "提供商",
+  "workingDirectory": "工作目录",
+  "mode": "模式",
+  "modeCode": "编码",
+  "modePlan": "规划",
+  "modeAsk": "问答",
+  "thinkingMode": "思考模式",
+  "create": "创建",
+  "cancel": "取消",
+  "archive": "归档",
+  "sessionArchived": "会话已归档",
+  "settings": "设置",
+  "linkNotConfigured": "当前开源版未配置这个链接",
+  "appearance": "外观",
+  "systemDefault": "跟随系统",
+  "light": "浅色",
+  "dark": "深色",
+  "host": "主机",
+  "connection": "连接",
+  "online": "在线",
+  "offline": "离线",
+  "use": "使用",
+  "providers": "提供商",
+  "noProviders": "未检测到提供商",
+  "available": "可用",
+  "diagnostics": "诊断",
+  "version": "版本",
+  "serverId": "服务器 ID",
+  "connectionState": "连接状态",
+  "agentsCount": "智能体数量",
+  "removeHost": "移除主机",
+  "remove": "移除",
+  "terminal": "终端",
+  "newTerminal": "新建",
+  "selectTerminal": "选择一个终端开始",
+  "files": "文件",
+  "name": "名称",
+  "size": "大小",
+  "modified": "修改时间",
+  "noFiles": "没有文件",
+  "directory": "目录",
+  "history": "历史",
+  "active": "活跃",
+  "noActiveSessions": "暂无历史会话",
+  "pastePairingLink": "粘贴配对链接",
+  "pairHost": "配对主机",
+  "pair": "配对",
+  "filePickerUnavailable": "当前平台不支持文件选择器",
+  "openFolder": "打开文件夹",
+  "recentProjects": "最近项目",
+  "welcomeTitle": "欢迎使用 mcoding",
+  "welcomeSubtitle": "监控和控制你的本地 AI 编程助手",
+  "onlineHosts": "我的设备",
+  "noHostsConfigured": "还没有配置主机",
+  "delete": "删除",
+  "allow": "允许",
+  "deny": "拒绝",
+  "implement": "执行",
+  "permissionRequest": "权限请求",
+  "plan": "规划",
+  "smsSendFailed": "验证码发送失败",
+  "tokenExpired": "Token 已失效",
+  "refreshTokenFailed": "刷新 Token 失败",
+  "editLabel": "编辑名称",
+  "deleteDevice": "删除设备",
+  "confirmDeleteDevice": "确定要删除 \"{label}\" 吗？",
+  "labelUpdated": "名称已更新",
+  "deviceDeleted": "设备已删除",
+  "enterDeviceName": "输入设备名称",
+  "deleteFailed": "删除失败：{error}",
+  "deviceName": "设备名称",
+  "enterDeviceNameHint": "请输入设备名称",
+  "save": "保存",
+  "updateFailed": "更新失败：{error}",
+  "stop": "停止",
+  "projects": "工程列表",
+  "menu": "菜单",
+  "thinking": "思考中",
+  "collapse": "收起",
+  "expandFullText": "展开全文",
+  "startConversation": "开始对话",
+  "enterYourQuestion": "输入你的问题",
+  "subscription": "订阅",
+  "subscriptionCenter": "订阅中心",
+  "currentMembership": "当前会员",
+  "freeUser": "免费用户",
+  "memberUser": "会员用户",
+  "subscriptionSource": "订阅来源",
+  "notSubscribed": "未订阅",
+  "appleSubscription": "苹果订阅",
+  "wechatSubscription": "微信支付订阅",
+  "alipaySubscription": "支付宝订阅",
+  "subscriptionDescription": "先接入苹果订阅，后续会继续补充微信、支付宝等第三方支付订阅。",
+  "subscriptionOnlyOnApple": "当前只支持在 iPhone / iPad / Mac App Store 环境开通苹果订阅。",
+  "appStoreUnavailable": "当前无法连接 App Store，请稍后再试。",
+  "subscriptionProductsUnavailable": "暂时没有可售的订阅商品，请检查商品 ID 和 App Store Connect 配置。",
+  "activateSubscription": "开通订阅",
+  "manageSubscription": "管理订阅",
+  "renewSubscription": "续费订阅",
+  "subscriptionEntryHint": "查看会员状态、开通苹果订阅或恢复已购买项目",
+  "feedback": "意见反馈",
+  "feedbackEntryHint": "提交问题、建议或体验反馈，可附带截图",
+  "feedbackContentLabel": "反馈内容",
+  "feedbackContentHint": "请描述你遇到的问题、期望的改进，或复现步骤。",
+  "feedbackContactLabel": "联系方式",
+  "feedbackContactHint": "选填：手机号、微信号、邮箱等，方便我们联系你",
+  "feedbackScreenshots": "截图",
+  "feedbackAddScreenshots": "添加截图",
+  "feedbackImageLimit": "最多上传 {count} 张截图",
+  "@feedbackImageLimit": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "feedbackEmptyContent": "请先填写反馈内容",
+  "feedbackSubmitting": "提交中...",
+  "submitFeedback": "提交反馈",
+  "feedbackSubmitSuccess": "反馈已提交，感谢你的建议",
+  "feedbackSubmitFailed": "提交反馈失败：{error}",
+  "@feedbackSubmitFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "restorePurchases": "恢复购买",
+  "restoringPurchases": "正在恢复已购买项目…",
+  "subscriptionProcessing": "正在处理订阅结果，请稍候…",
+  "subscriptionActivated": "订阅已开通，会员状态已更新",
+  "subscriptionVerifyFailed": "订阅校验失败，请稍后重试",
+  "subscriptionStartFailed": "无法发起订阅购买，请稍后重试",
+  "purchaseFailed": "购买失败，请稍后重试",
+  "purchaseCanceled": "已取消购买",
+  "subscriptionExpiresAt": "到期时间",
+  "subscriptionLegalNotice": "订阅将通过 Apple ID 付款，并按 App Store 规则自动续订；可在系统 Apple ID 订阅管理中取消。购买或恢复购买即表示你同意隐私政策和用户协议。",
+  "weeklyPlan": "周卡",
+  "monthlyPlan": "月卡",
+  "quarterlyPlan": "季卡",
+  "yearlyPlan": "年卡",
+  "customPlan": "自定义",
+  "recommendedPlan": "推荐",
+  "currentPlan": "当前套餐",
+  "unlimitedDevices": "无限设备",
+  "unlimitedVoice": "无限语音",
+  "androidPaymentComingSoon": "Android 支付即将上线，敬请期待",
+  "refresh": "刷新",
+  "selectDirectory": "选择目录",
+  "noMatchingFolders": "没有匹配的文件夹",
+  "noSelectableSubdirectories": "没有可选择的子目录",
+  "backToRootDirectory": "回到最上级目录",
+  "backToParentDirectory": "返回上一级目录",
+  "searchFolders": "搜索文件夹",
+  "clearSearch": "清除搜索",
+  "adding": "添加中",
+  "confirm": "确定",
+  "projectAdded": "已添加工程：{name}",
+  "addProjectFailed": "添加工程失败：{error}",
+  "disconnectAndRemove": "断开连接并移除 \"{label}\" 吗？",
+  "@disconnectAndRemove": {
+    "placeholders": {
+      "label": {"type": "String"}
+    }
+  },
+  "completionSound": "完成提醒",
+  "completionSoundDesc": "任务完成时播放提示音",
+  "updateFound": "发现新版本 v{version}",
+  "@updateFound": {
+    "placeholders": {
+      "version": {"type": "String"}
+    }
+  },
+  "updateContent": "更新内容：",
+  "packageSize": "安装包大小：{size}",
+  "@packageSize": {
+    "placeholders": {
+      "size": {"type": "String"}
+    }
+  },
+  "downloadFailed": "下载失败：{error}",
+  "@downloadFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "downloadingProgress": "正在下载... {progress}",
+  "@downloadingProgress": {
+    "placeholders": {
+      "progress": {"type": "String"}
+    }
+  },
+  "downloadComplete": "下载完成，点击安装",
+  "fileNotFound": "APK文件未找到，请重新下载",
+  "installFailed": "安装失败：{error}",
+  "installLater": "稍后安装",
+  "installNow": "立即安装",
+  "retryDownload": "重试下载",
+  "later": "稍后再说",
+  "updateNow": "立即更新",
+  "unknown": "未知",
+  "holdToTalk": "按住说话",
+  "holdToTalkCount": "按住说话 ({count}次)",
+  "@holdToTalkCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "replyInProgress": "回复中，暂不可用",
+  "releaseToCancel": "松开取消",
+  "releaseToSendSwipeCancel": "松开发送，上滑取消",
+  "listening": "正在聆听...",
+  "releaseFingerCancel": "松开手指取消",
+  "releaseFingerSendSwipeCancel": "松开手指发送，上滑取消",
+  "justNow": "刚刚",
+  "minutesAgo": "{count} 分钟前",
+  "@minutesAgo": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "hoursAgo": "{count} 小时前",
+  "@hoursAgo": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "daysAgo": "{count} 天前",
+  "@daysAgo": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "copy": "复制",
+  "quote": "引用",
+  "copied": "已复制",
+  "noProviderAvailable": "当前主机没有可用的 provider，请先安装或配置 Claude、Codex 或 OpenCode。",
+  "createFailed": "创建对话失败：{error}",
+  "@createFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "sendFailed": "发送消息失败：{error}",
+  "@sendFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "changeModeFailed": "修改 mode 失败：{error}",
+  "@changeModeFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "changeModelFailed": "修改 model 失败：{error}",
+  "@changeModelFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "changeThinkingFailed": "修改 thinking 失败：{error}",
+  "@changeThinkingFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "providerLockedWarning": "会话创建后无法修改 provider，请新建一个会话再选择 provider。",
+  "newConversation": "新对话",
+  "workspace": "工作区",
+  "voiceLimitReached": "今日语音使用次数已达上限，升级会员可无限使用",
+  "voiceTranscriptionApiKey": "语音转文字 Key",
+  "voiceTranscriptionApiKeyHint": "在这里填写你的 DashScope/Qwen ASR API Key。未配置前，语音转文字不可用。",
+  "voiceTranscriptionApiKeyMissing": "请先在设置里填写语音转文字 Key",
+  "voiceTranscriptionApiKeySaved": "语音转文字 Key 已保存",
+  "voiceTranscriptionApiKeyCleared": "语音转文字 Key 已清除",
+  "notConfigured": "未配置",
+  "configure": "去配置",
+  "edit": "编辑",
+  "clear": "清除",
+  "inputMessage": "输入消息...",
+  "addImage": "添加图片",
+  "stopReply": "停止回复",
+  "send": "发送",
+  "connecting": "连接中",
+  "disconnected": "已断开",
+  "deleteProjectTitle": "删除项目？",
+  "confirmDeleteProjectContent": "确定从我的项目中删除\"{name}\"？\n\n磁盘上的文件不会被删除。",
+  "@confirmDeleteProjectContent": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "projectDeleted": "已删除项目：{name}",
+  "@projectDeleted": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "deleteProjectFailed": "删除项目失败：{error}",
+  "@deleteProjectFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "myProjects": "我的项目",
+  "addProject": "添加项目",
+  "logout": "退出登录",
+  "deleteAccount": "注销账号",
+  "deleteAccountConfirm": "注销后将删除你的账号、已绑定设备、会员状态和使用记录。此操作不可恢复；如仍有 Apple 订阅，请先在系统 Apple ID 订阅管理中取消续订。",
+  "confirmDeleteAccount": "确认注销",
+  "deleteAccountFailed": "账号注销失败：{error}",
+  "@deleteAccountFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "confirmLogout": "确定要退出登录吗？",
+  "checkUpdate": "检查更新",
+  "alreadyLatestVersion": "当前已是最新版本",
+  "checkUpdateFailed": "检查更新失败: {error}",
+  "@checkUpdateFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "deviceAdded": "设备添加成功",
+  "deviceLimitTitle": "设备数量已达上限",
+  "freeUserDeviceLimit": "免费用户最多只能添加 1 台设备，升级会员可无限制添加",
+  "gotIt": "知道了",
+  "projectList": "项目列表",
+  "noProjects": "还没有工程",
+  "viewAllProjects": "查看全部工程",
+  "newSession": "新的会话",
+  "notifications": "通知消息",
+  "notificationDetail": "通知详情",
+  "noNotifications": "暂无通知",
+  "markAllRead": "全部已读",
+  "allNotificationsRead": "已全部标记为已读",
+  "notificationTypeSystem": "系统通知",
+  "notificationTypeUpdate": "更新通知",
+  "notificationTypePromotion": "活动通知",
+  "notificationTypeAccount": "账户通知",
+  "yesterday": "昨天",
+  "daysAgo": "{count}天前",
+  "@daysAgo": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "shareToWechat": "分享给好友",
+  "shareWebPageDesc": "MCoding - 远程 AI 编程助手，随时随地掌控你的代码"
+}

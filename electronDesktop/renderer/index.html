@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../build/icon.png" />
+    <title>mcoding Desktop</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="loading-spinner"></div>
+      <p class="loading-text" data-i18n="startingPaseo">Starting mcoding...</p>
+    </div>
+    <div class="drag-region"></div>
+    <main id="mainShell" class="shell shell-hidden">
+      <div class="header">
+        <div class="header-copy">
+          <h1>mcoding Desktop</h1>
+          <p id="notice" class="notice" data-i18n="preparingDaemon">Preparing daemon...</p>
+        </div>
+        <div class="status-stack">
+          <span id="stateBadge" class="badge" data-i18n="checking">Checking</span>
+          <p id="connectionInfo" class="connection-info" hidden></p>
+        </div>
+      </div>
+
+      <div id="updateBanner" class="update-banner" hidden>
+        <div class="update-banner-content">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span id="updateBannerText"></span>
+        </div>
+        <button id="updateDownloadBtn" class="update-download-btn" data-i18n="download">Download</button>
+        <button id="updateDismissBtn" class="update-dismiss-btn">&times;</button>
+        <div id="updateProgressBar" class="update-progress-bar" hidden>
+          <div class="update-progress-track">
+            <div class="update-progress-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <section class="panel relay-panel">
+        <div class="panel-heading">
+          <h2 data-i18n="relayConfigTitle">Relay Service</h2>
+        </div>
+        <label class="relay-field">
+          <span data-i18n="relayAddressLabel">Relay address</span>
+          <input
+            id="relayAddressInput"
+            class="relay-input"
+            type="text"
+            placeholder="relay.example.com:8787"
+          />
+        </label>
+        <p id="relayConfigHint" class="relay-config-hint" data-i18n="relayConfigHint">
+          Enter the relay-service address before starting the daemon.
+        </p>
+        <button id="relayConfigButton" class="relay-config-button" data-i18n="saveAndStart">
+          Save and Start
+        </button>
+      </section>
+
+      <div class="qr-card">
+        <div class="qr-wrap">
+          <p class="qr-hint" data-i18n="scanHint" hidden>请用 mcoding App 扫码连接本机</p>
+          <img id="qrImage" class="qr-image" alt="Pairing QR code" hidden />
+          <p id="qrMessage" class="qr-message loading" data-i18n="loadingQr">Loading QR...</p>
+        </div>
+      </div>
+
+      <section class="panel tools-panel">
+        <div class="panel-heading">
+          <h2 data-i18n="components">Components</h2>
+          <button id="toolsRefreshButton" class="icon-btn" data-i18n-title="refresh" title="Refresh">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
+          </button>
+        </div>
+        <div id="toolsList" class="tools-list"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

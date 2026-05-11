@@ -1,0 +1,31 @@
+{
+  "name": "@getpaseo/relay-service",
+  "version": "0.1.61",
+  "private": true,
+  "description": "Self-hosted relay-only NestJS service compatible with Paseo's relay protocol",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsx watch src/main.ts",
+    "build": "node -e \"require('node:fs').rmSync('dist',{ recursive: true, force: true })\" && tsc -p tsconfig.json --incremental false && node -e \"const fs=require('node:fs'); if(fs.existsSync('public')){fs.cpSync('public','dist/public',{recursive:true}); console.log('Copied public/ to dist/public/');}\"",
+    "start": "cross-env NODE_ENV=production node dist/src/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "dotenv": "^17.4.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "ws": "^8.18.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@types/ws": "^8.5.8",
+    "cross-env": "^10.1.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.2.2",
+    "vitest": "^3.2.4"
+  }
+}

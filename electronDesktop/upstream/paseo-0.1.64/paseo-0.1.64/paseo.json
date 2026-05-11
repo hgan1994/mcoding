@@ -1,0 +1,18 @@
+{
+  "worktree": {
+    "setup": [
+      "npm ci",
+      "npm run build:daemon",
+      "cp \"$PASEO_SOURCE_CHECKOUT_PATH/packages/server/.env\" \"$PASEO_WORKTREE_PATH/packages/server/.env\""
+    ]
+  },
+  "scripts": {
+    "daemon": {
+      "type": "service",
+      "command": "PASEO_LISTEN=0.0.0.0:$PASEO_PORT ./scripts/dev-daemon.sh"
+    },
+    "typecheck": {
+      "command": "npm run typecheck"
+    }
+  }
+}

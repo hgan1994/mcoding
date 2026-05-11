@@ -1,0 +1,195 @@
+import { existsSync, mkdirSync, readdirSync, renameSync, unlinkSync } from "node:fs";
+import path from "node:path";
+import pino from "pino";
+import pretty from "pino-pretty";
+import { createStream as createRotatingFileStream } from "rotating-file-stream";
+import { resolvePaseoHome } from "./paseo-home.js";
+const LOG_LEVELS = ["trace", "debug", "info", "warn", "error", "fatal"];
+const LOG_FORMATS = ["pretty", "json"];
+const LOG_LEVEL_PRIORITIES = {
+    trace: 10,
+    debug: 20,
+    info: 30,
+    warn: 40,
+    error: 50,
+    fatal: 60,
+};
+const DEFAULT_CONSOLE_LEVEL = "info";
+const DEFAULT_CONSOLE_FORMAT = "pretty";
+const DEFAULT_FILE_LEVEL = "debug";
+const DEFAULT_FILE_ROTATE_SIZE = "10m";
+const DEFAULT_FILE_ROTATE_MAX_FILES = 2;
+const DEFAULT_DAEMON_LOG_FILENAME = "daemon.log";
+function parseLogLevel(value) {
+    if (!value || !LOG_LEVELS.includes(value)) {
+        return undefined;
+    }
+    return value;
+}
+function parseLogFormat(value) {
+    if (!value || !LOG_FORMATS.includes(value)) {
+        return undefined;
+    }
+    return value;
+}
+function parsePositiveInteger(value) {
+    if (!value || value.trim().length === 0) {
+        return undefined;
+    }
+    const parsed = Number.parseInt(value, 10);
+    if (!Number.isInteger(parsed) || parsed <= 0) {
+        return undefined;
+    }
+    return parsed;
+}
+function resolveFilePath(paseoHome, configuredPath) {
+    const fallback = path.join(paseoHome, DEFAULT_DAEMON_LOG_FILENAME);
+    if (!configuredPath) {
+        return fallback;
+    }
+    if (path.isAbsolute(configuredPath)) {
+        return configuredPath;
+    }
+    return path.resolve(paseoHome, configuredPath);
+}
+function minLogLevel(levels) {
+    let minLevel = levels[0];
+    for (const level of levels) {
+        if (LOG_LEVEL_PRIORITIES[level] < LOG_LEVEL_PRIORITIES[minLevel]) {
+            minLevel = level;
+        }
+    }
+    return minLevel;
+}
+function resolveConfiguredPaseoHome(options) {
+    if (options?.paseoHome) {
+        return options.paseoHome;
+    }
+    return resolvePaseoHome(options?.env ?? process.env);
+}
+function normalizeLoggerConfigInput(config) {
+    if (!config) {
+        return undefined;
+    }
+    if ("log" in config) {
+        return config;
+    }
+    if ("level" in config || "format" in config) {
+        const legacy = config;
+        return {
+            log: {
+                ...(legacy.level ? { level: legacy.level } : {}),
+                ...(legacy.format ? { format: legacy.format } : {}),
+            },
+        };
+    }
+    return config;
+}
+function rotateOnRestart(filePath, maxFiles) {
+    if (!existsSync(filePath))
+        return;
+    const dir = path.dirname(filePath);
+    const base = path.basename(filePath);
+    const now = new Date();
+    const pad = (n) => String(n).padStart(2, "0");
+    const ts = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${pad(now.getHours())}${pad(now.getMinutes())}`;
+    try {
+        renameSync(filePath, path.join(dir, `${ts}-00-${base}`));
+    }
+    catch {
+        return;
+    }
+    // Clean up old rotated logs beyond maxFiles.
+    // Both our restart-rotated files (YYYYMMDD-HHMM-00-daemon.log) and
+    // rotating-file-stream's size-rotated files (YYYYMMDD-HHMM-NN-daemon.log)
+    // end with -${base} and sort chronologically by name.
+    const rotatedFiles = readdirSync(dir)
+        .filter((f) => f.endsWith(`-${base}`) && f !== base)
+        .sort()
+        .reverse();
+    for (const file of rotatedFiles.slice(maxFiles)) {
+        try {
+            unlinkSync(path.join(dir, file));
+        }
+        catch { }
+    }
+}
+function toRotatingFileStreamSize(size) {
+    const trimmed = size.trim();
+    const match = trimmed.match(/^(\d+)\s*([bBkKmMgG])?$/);
+    if (!match) {
+        return trimmed;
+    }
+    const value = match[1];
+    const unit = (match[2] ?? "M").toUpperCase();
+    return `${value}${unit}`;
+}
+export function resolveLogConfig(configInput, options) {
+    const persistedConfig = normalizeLoggerConfigInput(configInput);
+    const env = options?.env ?? process.env;
+    const paseoHome = resolveConfiguredPaseoHome(options);
+    const persistedLog = persistedConfig?.log;
+    const envGlobalLevel = parseLogLevel(env.PASEO_LOG);
+    const persistedGlobalLevel = persistedLog?.level;
+    const consoleLevel = parseLogLevel(env.PASEO_LOG_CONSOLE_LEVEL) ??
+        envGlobalLevel ??
+        persistedLog?.console?.level ??
+        persistedGlobalLevel ??
+        DEFAULT_CONSOLE_LEVEL;
+    const fileLevel = parseLogLevel(env.PASEO_LOG_FILE_LEVEL) ??
+        envGlobalLevel ??
+        persistedLog?.file?.level ??
+        persistedGlobalLevel ??
+        DEFAULT_FILE_LEVEL;
+    const consoleFormat = parseLogFormat(env.PASEO_LOG_FORMAT) ??
+        persistedLog?.console?.format ??
+        persistedLog?.format ??
+        DEFAULT_CONSOLE_FORMAT;
+    const filePath = resolveFilePath(paseoHome, env.PASEO_LOG_FILE_PATH ?? persistedLog?.file?.path);
+    const rotateMaxSize = env.PASEO_LOG_FILE_ROTATE_SIZE?.trim() ||
+        persistedLog?.file?.rotate?.maxSize ||
+        DEFAULT_FILE_ROTATE_SIZE;
+    const rotateMaxFiles = parsePositiveInteger(env.PASEO_LOG_FILE_ROTATE_COUNT) ??
+        persistedLog?.file?.rotate?.maxFiles ??
+        DEFAULT_FILE_ROTATE_MAX_FILES;
+    return {
+        level: minLogLevel([consoleLevel, fileLevel]),
+        console: {
+            level: consoleLevel,
+            format: consoleFormat,
+        },
+        file: {
+            level: fileLevel,
+            path: filePath,
+            rotate: {
+                maxSize: rotateMaxSize,
+                maxFiles: rotateMaxFiles,
+            },
+        },
+    };
+}
+export function createRootLogger(configInput, options) {
+    const config = resolveLogConfig(configInput, options);
+    mkdirSync(path.dirname(config.file.path), { recursive: true });
+    const consoleStream = config.console.format === "pretty"
+        ? pretty({
+            colorize: true,
+            singleLine: true,
+            ignore: "pid,hostname",
+        })
+        : pino.destination({ dest: 1, sync: false });
+    rotateOnRestart(config.file.path, config.file.rotate.maxFiles);
+    const fileStream = createRotatingFileStream(path.basename(config.file.path), {
+        path: path.dirname(config.file.path),
+        size: toRotatingFileStreamSize(config.file.rotate.maxSize),
+        maxFiles: config.file.rotate.maxFiles,
+    });
+    return pino({ level: config.level }, pino.multistream([
+        { level: config.console.level, stream: consoleStream },
+        { level: config.file.level, stream: fileStream },
+    ]));
+}
+export function createChildLogger(parent, name) {
+    return parent.child({ name });
+}
+//# sourceMappingURL=logger.js.map

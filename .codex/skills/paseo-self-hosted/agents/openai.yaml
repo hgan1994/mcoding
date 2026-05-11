@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paseo Self Hosted"
+  short_description: "自建 Paseo 远程编程项目开发边界"
+  default_prompt: "Use $paseo-self-hosted to understand the self-hosted Paseo workspace before making changes."

@@ -1,0 +1,87 @@
+{
+  "name": "paseo-self-hosted-electron-desktop",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Self-hosted mcoding Electron desktop that starts and stops the local daemon with the app.",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "check": "node --check main.js && node --check preload.cjs && node --check lib/daemon-manager.js && node --check lib/local-tools.js && node --check lib/login-shell-env.js && node --check lib/update-checker.js && node --check renderer/app.js && node --check renderer/i18n.js && node --check scripts/prepare-win-icon.mjs && sh -n scripts/prepare-bundled-upstream.sh",
+    "prepare:bundled-upstream": "node scripts/prepare-bundled-upstream.mjs",
+    "prepare:win:icon": "node scripts/prepare-win-icon.mjs",
+    "build:mac:dmg": "npm run prepare:bundled-upstream && electron-builder --mac dmg --config.electronDist=node_modules/electron/dist",
+    "build:win:exe": "npm run prepare:win:icon && npm run prepare:bundled-upstream && electron-builder --win nsis"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "electron": "41.0.3",
+    "electron-builder": "26.8.1",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.34.5"
+  },
+  "build": {
+    "appId": "local.paseo.selfhosted.desktop",
+    "productName": "mcoding Desktop",
+    "asar": false,
+    "icon": "build/icon",
+    "files": [
+      "main.js",
+      "preload.cjs",
+      "lib/**/*",
+      "renderer/**/*",
+      "package.json",
+      "build/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": ".bundled-upstream/paseo-0.1.64",
+        "to": "paseo-0.1.64"
+      }
+    ],
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "executableName": "mcoding Desktop",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "signAndEditExecutable": true
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "runAfterFinish": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "mcoding Desktop",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "uninstallDisplayName": "mcoding Desktop"
+    },
+    "mac": {
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "icon": "build/icon.png",
+      "category": "public.app-category.developer-tools"
+    }
+  }
+}

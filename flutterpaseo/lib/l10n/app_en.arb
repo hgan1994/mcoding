@@ -1,0 +1,385 @@
+{
+  "@@locale": "en",
+  "appTitle": "mcoding",
+  "loginTitle": "Phone Login",
+  "phoneLabel": "Phone",
+  "phoneHint": "Enter phone number",
+  "codeLabel": "Code",
+  "codeHint": "Enter verification code",
+  "sendCode": "Get Code",
+  "loginButton": "Login / Register",
+  "otherLoginMethods": "Other login methods",
+  "codeSent": "Verification code sent",
+  "networkError": "Network error, please try again later",
+  "loginFailed": "Login failed, please check your network",
+  "legalConsentTitle": "Terms and Privacy Policy",
+  "legalConsentBody": "Welcome to mcoding Open Source. Before continuing, please review the configured privacy policy and terms links for this deployment.",
+  "legalConsentRequired": "If you do not agree, you should stop using this deployment.",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfUse": "Terms of Use",
+  "agreeAndContinue": "Agree and Continue",
+  "disagreeAndExit": "Disagree and Exit",
+  "viewLegalAgreements": "View Privacy Policy and Terms",
+  "connectionSuccess": "Connected",
+  "connectionSuccessMsg": "Connected to {serverId}",
+  "enter": "Enter",
+  "connectionFailed": "Connection failed",
+  "rescan": "Rescan",
+  "connectionTimeout": "Connection timeout: please make sure relay-service is running, your phone and computer are on the same network, and the relay address in the QR code is accessible.",
+  "cameraPermissionDenied": "Please allow camera access in system settings before scanning.",
+  "cameraUnsupported": "No camera available on this device, please use a real device or paste the pairing link.",
+  "scanQRCode": "Scan to Add Device",
+  "sessions": "Sessions",
+  "archived": "Archived",
+  "noArchivedSessions": "No archived sessions",
+  "hostOffline": "Host offline",
+  "retry": "Retry",
+  "noSessions": "No sessions yet",
+  "createFirstAgent": "Create your first agent to get started",
+  "newAgent": "New Agent",
+  "initialPrompt": "Initial prompt",
+  "provider": "Provider",
+  "workingDirectory": "Working directory",
+  "mode": "Mode",
+  "modeCode": "Code",
+  "modePlan": "Plan",
+  "modeAsk": "Ask",
+  "thinkingMode": "Thinking Mode",
+  "create": "Create",
+  "cancel": "Cancel",
+  "archive": "Archive",
+  "sessionArchived": "Session archived",
+  "settings": "Settings",
+  "linkNotConfigured": "This link is not configured in the open-source build",
+  "appearance": "Appearance",
+  "systemDefault": "System default",
+  "light": "Light",
+  "dark": "Dark",
+  "host": "Host",
+  "connection": "Connection",
+  "online": "Online",
+  "offline": "Offline",
+  "use": "Use",
+  "providers": "Providers",
+  "noProviders": "No providers detected",
+  "available": "Available",
+  "diagnostics": "Diagnostics",
+  "version": "Version",
+  "serverId": "Server ID",
+  "connectionState": "Connection State",
+  "agentsCount": "Agents Count",
+  "removeHost": "Remove Host",
+  "remove": "Remove",
+  "terminal": "Terminal",
+  "newTerminal": "New",
+  "selectTerminal": "Select a terminal to begin",
+  "files": "Files",
+  "name": "Name",
+  "size": "Size",
+  "modified": "Modified",
+  "noFiles": "No files",
+  "directory": "Directory",
+  "history": "History",
+  "active": "Active",
+  "noActiveSessions": "No active sessions",
+  "pastePairingLink": "Paste Pairing Link",
+  "pairHost": "Pair Host",
+  "pair": "Pair",
+  "filePickerUnavailable": "File picker not available on this platform",
+  "openFolder": "Open Folder",
+  "recentProjects": "Recent Projects",
+  "welcomeTitle": "Welcome to mcoding",
+  "welcomeSubtitle": "Monitor and control your local AI coding agents",
+  "onlineHosts": "My Devices",
+  "noHostsConfigured": "No hosts configured yet",
+  "delete": "Delete",
+  "allow": "Allow",
+  "deny": "Deny",
+  "implement": "Implement",
+  "permissionRequest": "Permission Request",
+  "plan": "Plan",
+  "smsSendFailed": "Failed to send verification code",
+  "tokenExpired": "Token expired",
+  "refreshTokenFailed": "Failed to refresh token",
+  "editLabel": "Edit Label",
+  "deleteDevice": "Delete Device",
+  "confirmDeleteDevice": "Are you sure you want to delete \"{label}\"?",
+  "labelUpdated": "Label updated",
+  "deviceDeleted": "Device deleted",
+  "enterDeviceName": "Enter device name",
+  "deleteFailed": "Delete failed: {error}",
+  "deviceName": "Device Name",
+  "enterDeviceNameHint": "Please enter device name",
+  "save": "Save",
+  "updateFailed": "Update failed: {error}",
+  "stop": "Stop",
+  "projects": "Projects",
+  "menu": "Menu",
+  "thinking": "Thinking",
+  "collapse": "Collapse",
+  "expandFullText": "Expand full text",
+  "startConversation": "Start conversation",
+  "enterYourQuestion": "Enter your question",
+  "subscription": "Subscription",
+  "subscriptionCenter": "Subscription Center",
+  "currentMembership": "Current Membership",
+  "freeUser": "Free User",
+  "memberUser": "Member User",
+  "subscriptionSource": "Subscription Source",
+  "notSubscribed": "Not subscribed",
+  "appleSubscription": "Apple Subscription",
+  "wechatSubscription": "WeChat Pay Subscription",
+  "alipaySubscription": "Alipay Subscription",
+  "subscriptionDescription": "Apple subscriptions are enabled first. We will add WeChat Pay and Alipay subscriptions next.",
+  "subscriptionOnlyOnApple": "Apple subscriptions are only available on iPhone, iPad, or Mac App Store builds.",
+  "appStoreUnavailable": "The App Store is unavailable right now. Please try again later.",
+  "subscriptionProductsUnavailable": "No subscription products are available. Check your product IDs and App Store Connect setup.",
+  "activateSubscription": "Activate Subscription",
+  "manageSubscription": "Manage Subscription",
+  "renewSubscription": "Renew Subscription",
+  "subscriptionEntryHint": "View membership, activate Apple subscription, or restore purchases",
+  "feedback": "Feedback",
+  "feedbackEntryHint": "Report issues, suggestions, or product feedback with screenshots",
+  "feedbackContentLabel": "Feedback",
+  "feedbackContentHint": "Describe the issue, improvement idea, or steps to reproduce.",
+  "feedbackContactLabel": "Contact",
+  "feedbackContactHint": "Optional: phone, WeChat, email, or other contact info",
+  "feedbackScreenshots": "Screenshots",
+  "feedbackAddScreenshots": "Add screenshots",
+  "feedbackImageLimit": "Upload up to {count} screenshots",
+  "@feedbackImageLimit": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "feedbackEmptyContent": "Please enter your feedback first",
+  "feedbackSubmitting": "Submitting...",
+  "submitFeedback": "Submit feedback",
+  "feedbackSubmitSuccess": "Feedback submitted. Thank you.",
+  "feedbackSubmitFailed": "Failed to submit feedback: {error}",
+  "@feedbackSubmitFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "restorePurchases": "Restore Purchases",
+  "restoringPurchases": "Restoring previous purchases...",
+  "subscriptionProcessing": "Processing your subscription result...",
+  "subscriptionActivated": "Subscription activated and membership updated",
+  "subscriptionVerifyFailed": "Subscription verification failed. Please try again.",
+  "subscriptionStartFailed": "Unable to start the subscription purchase. Please try again.",
+  "purchaseFailed": "Purchase failed. Please try again.",
+  "purchaseCanceled": "Purchase canceled",
+  "subscriptionExpiresAt": "Expires At",
+  "subscriptionLegalNotice": "Subscriptions are charged to your Apple ID and renew automatically under App Store rules. You can cancel in Apple ID subscription settings. Purchasing or restoring purchases means you agree to the Privacy Policy and Terms of Use.",
+  "weeklyPlan": "Weekly",
+  "monthlyPlan": "Monthly",
+  "quarterlyPlan": "Quarterly",
+  "yearlyPlan": "Yearly",
+  "customPlan": "Custom",
+  "recommendedPlan": "Recommended",
+  "currentPlan": "Current Plan",
+  "unlimitedDevices": "Unlimited Devices",
+  "unlimitedVoice": "Unlimited Voice",
+  "androidPaymentComingSoon": "Android payment coming soon",
+  "refresh": "Refresh",
+  "selectDirectory": "Select Directory",
+  "noMatchingFolders": "No matching folders",
+  "noSelectableSubdirectories": "No selectable subdirectories",
+  "backToRootDirectory": "Back to root directory",
+  "backToParentDirectory": "Back to parent directory",
+  "searchFolders": "Search folders",
+  "clearSearch": "Clear search",
+  "adding": "Adding",
+  "confirm": "Confirm",
+  "projectAdded": "Project added: {name}",
+  "addProjectFailed": "Failed to add project: {error}",
+  "disconnectAndRemove": "Disconnect from \"{label}\" and remove it?",
+  "completionSound": "Task Completion Sound",
+  "completionSoundDesc": "Play a sound when a task is completed",
+  "updateFound": "New version available v{version}",
+  "@updateFound": {
+    "placeholders": {
+      "version": {"type": "String"}
+    }
+  },
+  "updateContent": "Release notes:",
+  "packageSize": "Package size: {size}",
+  "@packageSize": {
+    "placeholders": {
+      "size": {"type": "String"}
+    }
+  },
+  "downloadFailed": "Download failed: {error}",
+  "@downloadFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "downloadingProgress": "Downloading... {progress}",
+  "@downloadingProgress": {
+    "placeholders": {
+      "progress": {"type": "String"}
+    }
+  },
+  "downloadComplete": "Download complete, tap to install",
+  "fileNotFound": "APK file not found, please retry download",
+  "installFailed": "Install failed: {error}",
+  "installLater": "Install later",
+  "installNow": "Install now",
+  "retryDownload": "Retry download",
+  "later": "Later",
+  "updateNow": "Update now",
+  "unknown": "Unknown",
+  "holdToTalk": "Hold to talk",
+  "holdToTalkCount": "Hold to talk ({count}x)",
+  "@holdToTalkCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "replyInProgress": "Replying, unavailable",
+  "releaseToCancel": "Release to cancel",
+  "releaseToSendSwipeCancel": "Release to send, swipe up to cancel",
+  "listening": "Listening...",
+  "releaseFingerCancel": "Release finger to cancel",
+  "releaseFingerSendSwipeCancel": "Release to send, swipe up to cancel",
+  "justNow": "Just now",
+  "minutesAgo": "{count} min ago",
+  "@minutesAgo": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "hoursAgo": "{count} hr ago",
+  "@hoursAgo": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "daysAgo": "{count} d ago",
+  "@daysAgo": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "copy": "Copy",
+  "quote": "Quote",
+  "copied": "Copied",
+  "noProviderAvailable": "No provider available on this host. Please install or configure Claude, Codex, or OpenCode first.",
+  "createFailed": "Failed to create conversation: {error}",
+  "@createFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "sendFailed": "Failed to send message: {error}",
+  "@sendFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "changeModeFailed": "Failed to change mode: {error}",
+  "@changeModeFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "changeModelFailed": "Failed to change model: {error}",
+  "@changeModelFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "changeThinkingFailed": "Failed to change thinking: {error}",
+  "@changeThinkingFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "providerLockedWarning": "Provider cannot be changed after session creation. Create a new session to select a different provider.",
+  "newConversation": "New conversation",
+  "workspace": "Workspace",
+  "voiceLimitReached": "Daily voice limit reached. Upgrade to member for unlimited use",
+  "voiceTranscriptionApiKey": "Voice transcription API key",
+  "voiceTranscriptionApiKeyHint": "Enter your DashScope/Qwen ASR API key here. Voice-to-text stays unavailable until this key is configured.",
+  "voiceTranscriptionApiKeyMissing": "Please enter a voice transcription API key in Settings first",
+  "voiceTranscriptionApiKeySaved": "Voice transcription API key saved",
+  "voiceTranscriptionApiKeyCleared": "Voice transcription API key cleared",
+  "notConfigured": "Not configured",
+  "configure": "Configure",
+  "edit": "Edit",
+  "clear": "Clear",
+  "inputMessage": "Type a message...",
+  "addImage": "Add image",
+  "stopReply": "Stop",
+  "send": "Send",
+  "connecting": "Connecting",
+  "disconnected": "Disconnected",
+  "deleteProjectTitle": "Delete project?",
+  "confirmDeleteProjectContent": "Remove \"{name}\" from your projects?\n\nFiles on disk will not be deleted.",
+  "@confirmDeleteProjectContent": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "projectDeleted": "Project removed: {name}",
+  "@projectDeleted": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "deleteProjectFailed": "Failed to remove project: {error}",
+  "@deleteProjectFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "myProjects": "My Projects",
+  "addProject": "Add Project",
+  "logout": "Log out",
+  "deleteAccount": "Delete Account",
+  "deleteAccountConfirm": "Deleting your account removes your account, paired devices, membership state, and usage records. This cannot be undone. If you still have an Apple subscription, cancel renewal in Apple ID subscription settings first.",
+  "confirmDeleteAccount": "Delete Account",
+  "deleteAccountFailed": "Failed to delete account: {error}",
+  "@deleteAccountFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "confirmLogout": "Are you sure you want to log out?",
+  "checkUpdate": "Check for updates",
+  "alreadyLatestVersion": "Already on the latest version",
+  "checkUpdateFailed": "Update check failed: {error}",
+  "@checkUpdateFailed": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "deviceAdded": "Device added successfully",
+  "deviceLimitTitle": "Device limit reached",
+  "freeUserDeviceLimit": "Free users can add up to 1 device. Upgrade to member for unlimited devices",
+  "gotIt": "Got it",
+  "projectList": "Projects",
+  "noProjects": "No projects yet",
+  "viewAllProjects": "View all projects",
+  "newSession": "New session",
+  "notifications": "Notifications",
+  "notificationDetail": "Notification Detail",
+  "noNotifications": "No notifications",
+  "markAllRead": "Mark all read",
+  "allNotificationsRead": "All notifications marked as read",
+  "notificationTypeSystem": "System",
+  "notificationTypeUpdate": "Update",
+  "notificationTypePromotion": "Promotion",
+  "notificationTypeAccount": "Account",
+  "yesterday": "Yesterday",
+  "daysAgo": "{count} days ago",
+  "@daysAgo": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "shareToWechat": "Share to Friends",
+  "shareWebPageDesc": "MCoding - Remote AI coding assistant, control your code from anywhere"
+}

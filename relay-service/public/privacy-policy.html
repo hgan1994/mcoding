@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="mCoding iOS 应用与相关服务的隐私政策，说明我们收集的数据类型、使用方式、存储与安全措施。"
+  />
+  <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <title>mCoding 隐私政策</title>
+  <link rel="stylesheet" href="/privacy-policy.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <a href="/" class="brand">
+          <img src="/assets/logo.png" alt="mCoding" class="brand-logo" />
+          <span>mCoding</span>
+        </a>
+        <a href="/" class="back-link">返回首页</a>
+      </nav>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Privacy Policy</p>
+        <h1>mCoding 隐私政策</h1>
+        <p class="lead">
+          本政策适用于 mCoding iOS 应用、相关账号系统、配对服务、订阅验证与反馈支持服务。
+          我们尽量只收集提供服务所必需的信息，并将远程编程会话内容与业务数据分开处理。
+        </p>
+        <div class="hero-meta">
+          <span>生效日期：2026 年 5 月 5 日</span>
+          <span>适用范围：当前 mCoding 开源版部署</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content-grid">
+      <aside class="toc-card">
+        <p class="toc-title">目录</p>
+        <a href="#scope">1. 适用范围</a>
+        <a href="#data">2. 我们收集的信息</a>
+        <a href="#usage">3. 信息使用方式</a>
+        <a href="#relay">4. Relay 与会话隐私</a>
+        <a href="#sharing">5. 信息共享</a>
+        <a href="#storage">6. 存储与保留</a>
+        <a href="#rights">7. 你的权利</a>
+        <a href="#children">8. 未成年人</a>
+        <a href="#updates">9. 政策更新</a>
+        <a href="#contact">10. 联系我们</a>
+      </aside>
+
+      <div class="article-card">
+        <section id="scope" class="policy-section">
+          <h2>1. 适用范围</h2>
+          <p>
+            本隐私政策适用于 mCoding 提供的 iOS 应用、与该应用配套的账号系统、
+            订阅验证、反馈处理和 relay 中继服务。如果你通过扫码将移动端连接到本地 daemon，
+            本政策也适用于为建立连接、维护连接和处理账号状态所需的最小化服务端数据。
+          </p>
+        </section>
+
+        <section id="data" class="policy-section">
+          <h2>2. 我们收集的信息</h2>
+          <div class="info-block">
+            <h3>2.1 账号与身份信息</h3>
+            <p>当你登录或注册时，我们可能处理以下信息：</p>
+            <ul>
+              <li>手机号与短信验证码登录所需信息。</li>
+              <li>微信登录返回的标识信息，例如 `unionId`、`openId`、昵称和头像。</li>
+              <li>账号状态、会员等级、订阅状态与创建时间等账号资料。</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h3>2.2 设备与配对信息</h3>
+            <p>为了让手机与桌面端或 daemon 建立连接，我们会处理必要的设备元数据，例如：</p>
+            <ul>
+              <li>配对后的设备标识 `serverId`、设备标签和 relay endpoint。</li>
+              <li>用于连接校验的 daemon 公钥、公网或局域网连接元数据。</li>
+              <li>应用平台、版本号、页面来源等基础运行信息。</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h3>2.3 订阅与支付验证信息</h3>
+            <p>当你在 iOS 上购买会员订阅时，我们会处理：</p>
+            <ul>
+              <li>Apple 商品标识、交易号、原始交易号。</li>
+              <li>用于校验订阅状态的 App Store receipt 数据。</li>
+              <li>订阅环境、过期时间、最近校验时间和校验结果摘要。</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h3>2.4 反馈与客服信息</h3>
+            <p>当你通过应用内反馈联系我们时，我们会处理：</p>
+            <ul>
+              <li>反馈文本、联系方式（如果你主动填写）。</li>
+              <li>页面名称、应用版本、平台信息。</li>
+              <li>最多 4 张你主动上传的截图，用于排查问题。</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h3>2.5 安全与运行日志</h3>
+            <p>
+              为了防止滥用并维持服务稳定，我们可能记录有限的技术信息，例如请求 IP、
+              relay 连接状态、daemon 主机名和必要的速率限制记录。
+            </p>
+          </div>
+        </section>
+
+        <section id="usage" class="policy-section">
+          <h2>3. 信息使用方式</h2>
+          <ul>
+            <li>为你创建和维护账号，完成手机号或微信登录。</li>
+            <li>建立、同步和管理移动端与桌面端之间的配对关系。</li>
+            <li>验证 Apple 订阅状态，更新会员权益和设备配额。</li>
+            <li>处理问题反馈、故障排查、版本兼容与客服支持。</li>
+            <li>进行安全审计、限流、防滥用和服务可用性维护。</li>
+          </ul>
+        </section>
+
+        <section id="relay" class="policy-section">
+          <h2>4. Relay 与会话隐私</h2>
+          <div class="highlight-card">
+            <p>
+              mCoding 的 relay 服务主要负责转发远程连接流量。根据当前产品设计，
+              代码内容、会话消息和大部分远程编程数据应保持端到端保护，
+              relay 服务不会以“读取用户代码内容”为目的处理这些数据。
+            </p>
+          </div>
+          <p>
+            但是，为了建立连接和维持会话，服务端仍然需要处理最少量的连接元数据，
+            例如连接角色、版本、设备标识、主机名和连接状态。如果你主动提交反馈截图，
+            截图中包含的信息将按你的提交目的用于问题处理。
+          </p>
+        </section>
+
+        <section id="sharing" class="policy-section">
+          <h2>5. 信息共享</h2>
+          <p>我们不会出售你的个人信息。仅在以下必要场景中共享：</p>
+          <ul>
+            <li>与你选择的登录或支付渠道共享，例如微信登录、Apple 订阅校验。</li>
+            <li>与短信服务、云存储或基础设施供应商共享必要的最小化技术数据。</li>
+            <li>在法律法规要求、争议处理或安全调查时依法提供。</li>
+          </ul>
+        </section>
+
+        <section id="storage" class="policy-section">
+          <h2>6. 存储与保留</h2>
+          <ul>
+            <li>账号、设备和订阅数据会在提供服务所必需的期限内保存。</li>
+            <li>反馈文本和截图会在问题处理、审计或合理运维周期内保留。</li>
+            <li>安全日志和限流记录通常只保留有限时间，用于防滥用和排障。</li>
+          </ul>
+          <p>
+            我们会采取合理的访问控制、服务端权限隔离和部署安全措施来保护这些信息，
+            但任何互联网传输都无法保证绝对零风险。
+          </p>
+        </section>
+
+        <section id="rights" class="policy-section">
+          <h2>7. 你的权利</h2>
+          <p>在适用法律允许的范围内，你可以请求我们：</p>
+          <ul>
+            <li>访问或了解我们持有的你的账号与订阅信息。</li>
+            <li>更正你主动提供的错误资料。</li>
+            <li>删除不再需要的反馈信息或申请注销账号。</li>
+          </ul>
+          <p>
+            如果你希望行使相关权利，可以通过应用内反馈功能向我们提交请求。
+          </p>
+        </section>
+
+        <section id="children" class="policy-section">
+          <h2>8. 未成年人</h2>
+          <p>
+            本服务面向具备相应民事行为能力的用户。若你是未成年人，请在监护人同意和指导下使用本服务。
+            如果我们发现误收集了未成年人的不当信息，会在核实后尽快处理。
+          </p>
+        </section>
+
+        <section id="updates" class="policy-section">
+          <h2>9. 政策更新</h2>
+          <p>
+            当产品功能、数据处理方式或法律要求发生变化时，我们可能更新本政策。
+            更新后的版本会发布在本页面，并以新的生效日期标注。
+          </p>
+        </section>
+
+        <section id="contact" class="policy-section">
+          <h2>10. 联系我们</h2>
+          <p>
+            运营主体：浦城县华通超算网络工作室
+          </p>
+          <p>
+            如果你对本隐私政策或个人信息处理方式有疑问，可通过 mCoding 应用内反馈功能联系我们，
+            或联系当前部署维护者获取最新公开信息与联系方式。
+          </p>
+        </section>
+
+        <section class="policy-section english-note">
+          <h2>English Summary</h2>
+          <p>
+            mCoding collects the minimum account, device-pairing, subscription-verification,
+            feedback, and security-log data needed to operate the iOS app and relay service.
+            Remote coding session content is intended to stay end-to-end protected, while the
+            relay processes only the metadata required to connect and maintain sessions.
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
