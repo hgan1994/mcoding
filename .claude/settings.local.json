@@ -20,7 +20,9 @@
       "Bash(git -C /Users/hgan/Desktop/paseo-0.1.61 diff HEAD -- flutterpaseo/lib/src/screens/app_settings_screen.dart)",
       "Bash(git -C /Users/hgan/Desktop/paseo-0.1.61 show mcoding/main:README.md)",
       "Bash(git *)",
-      "Bash(python3 -c \"import sys,json; [print\\(f['name']\\) for f in json.loads\\(sys.stdin.read\\(\\)\\) if f['type']=='file']\")"
+      "Bash(python3 -c \"import sys,json; [print\\(f['name']\\) for f in json.loads\\(sys.stdin.read\\(\\)\\) if f['type']=='file']\")",
+      "Bash(python3 -c \"import sys,json; [print\\(f['name']\\) for f in json.loads\\(sys.stdin.read\\(\\)\\) if 'screen' in f['name'].lower\\(\\) or 'cap' in f['name'].lower\\(\\) or f['name'].endswith\\(\\('.png','.jpg','.jpeg'\\)\\)]\")",
+      "Bash(python3 -c \"import sys,json; [print\\(c['sha'][:7], c['commit']['message'][:60], c['commit']['author']['date'][:19]\\) for c in json.loads\\(sys.stdin.read\\(\\)\\)]\")"
     ]
   }
 }

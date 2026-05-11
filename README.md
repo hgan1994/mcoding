@@ -1,12 +1,12 @@
 # mcoding:个人电脑远程 AI 编程工具
 
-<p align="center">
-<img src="screencap1.png" width="45%" />
-<img src="screencap2.jpg" width="45%" />
-</p>
+
 
 这是一个开源的自托管远程 AI 编程app。支持 Claude Code、Codex CLI、OpenCode 。
-
+<p align="center">
+<img src="screencap1.png" width="26%" />
+<img src="screencap2.jpg" width="20%" />
+</p>
 该项目抽离了 Paseo 的 daemon、relay 核心模块，剪裁其它功能，方便国内用户使用：
 
 - `flutterpaseo/`：Flutter 移动端，用于扫码配对、管理已连接主机、选择项目目录、创建远程 AI 编程会话和收发对话。
