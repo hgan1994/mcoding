@@ -1,5 +1,8 @@
 # mcoding:个人电脑远程 AI 编程工具
 
+![](screencap1.png)
+![](screencap2.jpg)
+
 这是一个开源的自托管远程 AI 编程app。支持 Claude Code、Codex CLI、OpenCode 。
 
 该项目抽离了 Paseo 的 daemon、relay 核心模块，剪裁其它功能，方便国内用户使用：

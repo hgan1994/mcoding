@@ -17,7 +17,10 @@
       "Bash(rmdir relay-admin/src/composables)",
       "Bash(flutter analyze *)",
       "Bash(npx tsc *)",
-      "Bash(git -C /Users/hgan/Desktop/paseo-0.1.61 diff HEAD -- flutterpaseo/lib/src/screens/app_settings_screen.dart)"
+      "Bash(git -C /Users/hgan/Desktop/paseo-0.1.61 diff HEAD -- flutterpaseo/lib/src/screens/app_settings_screen.dart)",
+      "Bash(git -C /Users/hgan/Desktop/paseo-0.1.61 show mcoding/main:README.md)",
+      "Bash(git *)",
+      "Bash(python3 -c \"import sys,json; [print\\(f['name']\\) for f in json.loads\\(sys.stdin.read\\(\\)\\) if f['type']=='file']\")"
     ]
   }
 }
