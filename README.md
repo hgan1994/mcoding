@@ -1,7 +1,9 @@
 # mcoding:个人电脑远程 AI 编程工具
 
-![](screencap1.png)
-![](screencap2.jpg)
+<p align="center">
+<img src="screencap1.png" width="45%" />
+<img src="screencap2.jpg" width="45%" />
+</p>
 
 这是一个开源的自托管远程 AI 编程app。支持 Claude Code、Codex CLI、OpenCode 。
 
